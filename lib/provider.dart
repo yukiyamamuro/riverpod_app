@@ -7,3 +7,5 @@ final titleProvider = Provider<String>((ref) {
 final bodyTextProvider = Provider<String>((ref) {
   return 'Click!';
 });
+
+final countProvider = StateProvider<int>((ref) => 0);
