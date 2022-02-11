@@ -41,6 +41,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
         title: Text(
           ref.watch(titleProvider),
         ),
+        backgroundColor: const Color(0xff7f1184),
       ),
       body: Center(
         child: Column(
