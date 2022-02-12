@@ -93,8 +93,12 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(ref.watch(countDataProvider).countUp.toString()),
-                Text(ref.watch(countDataProvider).countDown.toString()),
+                Text(ref
+                    .watch(countDataProvider.select((val) => val.countUp))
+                    .toString()),
+                Text(ref
+                    .watch(countDataProvider.select((val) => val.countDown))
+                    .toString()),
               ],
             ),
             GestureDetector(
