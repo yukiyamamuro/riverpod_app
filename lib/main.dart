@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends ConsumerStatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   ConsumerState<MyHomePage> createState() => _MyHomePageState();
@@ -138,7 +138,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ref.read(countDataProvider.state).state = CountData(
+          ref.read(countDataProvider.state).state = const CountData(
             count: 0,
             countUp: 0,
             countDown: 0,
