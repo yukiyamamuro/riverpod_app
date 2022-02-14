@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -27,6 +28,17 @@ void main() {
     await multiScreenGolden(
       tester,
       'myHomePage_0init',
+      devices: devices,
+    );
+
+    await tester.tap(find.byIcon(CupertinoIcons.plus));
+    await tester.tap(find.byIcon(CupertinoIcons.plus));
+    await tester.tap(find.byIcon(CupertinoIcons.minus));
+    await tester.pump();
+
+    await multiScreenGolden(
+      tester,
+      'myHomePage_1tapped',
       devices: devices,
     );
   });
