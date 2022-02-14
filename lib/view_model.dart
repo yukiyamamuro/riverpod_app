@@ -7,7 +7,7 @@ class ViewModel {
   late WidgetRef _ref;
 
   void setRef(WidgetRef ref) {
-    this._ref = ref;
+    _ref = ref;
   }
 
   get count => _ref.watch(countDataProvider).count.toString();
