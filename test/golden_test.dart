@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:riverpod_app/main.dart';
 import 'package:riverpod_app/view_model.dart';
 
 void main() {
+  setUpAll(() async {
+    await loadAppFonts();
+  });
   testGoldens('normal', (tester) async {
     const iPhoneN = Device(
       name: 'iPhoneN',
