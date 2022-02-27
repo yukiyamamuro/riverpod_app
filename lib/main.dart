@@ -39,6 +39,7 @@ class MyHomePage extends ConsumerStatefulWidget {
 
 class _MyHomePageState extends ConsumerState<MyHomePage> {
   bool _isElevated = false;
+
   late ViewModel _viewModel;
 
   @override
